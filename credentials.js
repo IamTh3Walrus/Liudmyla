@@ -1,1 +1,0 @@
-module.exports = { cookieSecret: 'may the fourth be with you',};
