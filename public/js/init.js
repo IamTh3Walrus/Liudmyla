@@ -6,11 +6,11 @@
     $('.carousel').carousel();
     $('.parallax').parallax();
     $('.materialboxed').materialbox();
-  
+
 // Moves the carousel
     $('.carousel').carousel();
       setInterval(function() {
         $('.carousel').carousel('next');
-      }, 4000); // every 2 seconds
+      }, 3000); // every 3 seconds
   }); // end of document ready
 })(jQuery); // end of jQuery name space

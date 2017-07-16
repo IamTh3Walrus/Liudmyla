@@ -49,27 +49,6 @@ app.get('/contact', function(req, res) {
     });
 });
 
-app.get('/thankyou', function(req, res) {
-    res.render('thankyou');
-});
-
-var api_key = 'key-ef028d871a909001bf83346a7d69edfe';
-var domain = 'sandboxb4a01b77f4cf4315bd9550ab4efda3b5.mailgun.org';
-var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
-
-var data = {
-  from: 'Liudmyla Website <postmaster@sandboxb4a01b77f4cf4315bd9550ab4efda3b5.mailgun.org>',
-  to: 'redcard1016@yahoo.com',
-        subject: req.body.email,
-        text: req.body.ques
-    };
-
-    mailgun.messages().send(data, function(error, body) {
-        console.log(body);
-    });
-    res.redirect(303, '/thankyou');
-});
-
 //Tells the app to listen to the port.
 app.listen(app.get('port'), function() {
     console.log('Express started');
