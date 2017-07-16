@@ -44,15 +44,13 @@ app.get('/portfolio', function(req, res) {
 });
 
 app.get('/contact', function(req, res) {
-    res.render('contact');
+    res.render('contact', {
+        csrf: 'CSRF token here'
+    });
 });
 
 app.get('/thankyou', function(req, res) {
     res.render('thankyou');
-});
-
-app.post('/contact' function(req, res){
-
 });
 
 var api_key = 'key-ef028d871a909001bf83346a7d69edfe';
@@ -62,13 +60,9 @@ var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
 var data = {
   from: 'Liudmyla Website <postmaster@sandboxb4a01b77f4cf4315bd9550ab4efda3b5.mailgun.org>',
   to: 'redcard1016@yahoo.com',
-  subject: req.body.userName,
-  text: req.body.Usermessage
-};
-
-mailgun.messages().send(data, function (error, body) {
-  console.log(body);
-});
+        subject: req.body.email,
+        text: req.body.ques
+    };
 
     mailgun.messages().send(data, function(error, body) {
         console.log(body);
