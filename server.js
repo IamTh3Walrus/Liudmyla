@@ -55,7 +55,7 @@ app.get('/thankyou', function(req, res) {
 
 app.post('/process', function(req, res) {
     var api_key = 'key-ef028d871a909001bf83346a7d69edfe';
-    var domain = 'sandboxcc93a4dd62c948f9a8e118d5aedc5219.mailgun.org';
+    var domain = 'sandboxb4a01b77f4cf4315bd9550ab4efda3b5.mailgun.org';
     var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
 
     var data = {
