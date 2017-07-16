@@ -36,24 +36,25 @@
 
  <div class="contact-form z-depth-1" id="contact">
        <div class="row">                       <h2>Contact Me</h2>
-         <form  id="contactForm" data-toggle="validator">
+         <form  id="contactForm" role="form"
+                          action="/process?form=contactus" method="POST" data-toggle="validator">
              <div id="msgSubmit" class="h3 text-center"></div>
              <div class="input-field col m12 s12 wow fadeIn a2">
                  <label for="name" class="h4 blue-text">Full Name *</label>
-                 <input type="text" class="form-control validate black-text" id="" required data-error="NEW ERROR MESSAGE">
+                 <input type="text" name="name" class="form-control validate black-text" id="" required data-error="NEW ERROR MESSAGE">
              </div>
              <div class="input-field col m12 s12 wow fadeIn a4">
                  <label for="email" class="h4 blue-text">Email *</label>
-                 <input type="email" class="form-control validate black-text" id="" required>
+                 <input type="email" name="email" class="form-control validate black-text" id="" required>
              </div>
              <div class="input-field col m12 s12 wow fadeIn a3">
                  <label for="last_name" class="h4 blue-text">Subject *</label>
-                 <input type="text" class="form-control validate black-text" id="" required>
+                 <input type="text" name="subject" class="form-control validate black-text" id="" required>
              </div>
 
              <div class="input-field col m12 s12 wow fadeIn a6">
                  <label for="message" class="h4 blue-text">Message *</label>
-                 <input type="text" class="form-control validate black-text" id="" required>
+                 <input type="text" name="message" class="form-control validate black-text" id="" required>
 
              </div>
              <button type="submit" id="form-submit" class="btn btn-success waves-effect wow fadeIn a7">Submit</button>
