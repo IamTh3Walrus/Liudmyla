@@ -61,10 +61,8 @@ app.post('/process', function(req, res) {
     var data = {
         from: 'Liudmyla Website <postmaster@sandboxb4a01b77f4cf4315bd9550ab4efda3b5.mailgun.org>',
         to: 'redcard1016@yahoo.com',
-        name: req.body.name,
-        email: req.body.email,
-        subject: req.body.subject,
-        message: req.body.message
+        subject: req.body.email,
+        text: req.body.ques
     };
 
     mailgun.messages().send(data, function(error, body) {

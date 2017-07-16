@@ -34,34 +34,32 @@
       <div class="container">
        <!-- Page Content goes here -->
 
- <div class="contact-form z-depth-1" id="contact">
-       <div class="row">                       <h2>Contact Me</h2>
-         <form id="contactForm" role="form"
-                          action="/process?form=contact-form" method="POST" data-toggle="validator">
-             <div id="msgSubmit" class="h3 text-center"></div>
-             <div class="input-field col m12 s12 wow fadeIn a2">
-                 <label for="name" class="h4 blue-text">Full Name *</label>
-                 <input type="text" name="name" class="form-control validate black-text" id="" required data-error="NEW ERROR MESSAGE">
-             </div>
-             <div class="input-field col m12 s12 wow fadeIn a4">
-                 <label for="email" class="h4 blue-text">Email *</label>
-                 <input type="email" name="email" class="form-control validate black-text" id="" required>
-             </div>
-             <div class="input-field col m12 s12 wow fadeIn a3">
-                 <label for="last_name" class="h4 blue-text">Subject *</label>
-                 <input type="text" name="subject" class="form-control validate black-text" id="" required>
-             </div>
+                            <div class="row">                       <h2>Contact Me</h2>
+                            <div class="contact-form z-depth-1" id="contact">
+                            <form class="formContactUs" role="form"
+                              action="/process?form=contactus" method="POST">
+                              <input type="hidden" name="_csrf" value="{{csrf}}">
 
-             <div class="input-field col m12 s12 wow fadeIn a6">
-                 <label for="message" class="h4 blue-text">Message *</label>
-                 <input type="text" name="message" class="form-control validate black-text" id="" required>
+                              <div class="input-field col m12 s12 wow fadeIn a4">
+                              <label for="email" class="h4 blue-text">Email *</label>
 
-             </div>
-             <button type="submit" id="form-submit" class="btn btn-success waves-effect wow fadeIn a7">Submit</button>
-         </form>
+                                <input type="text" name="email" placeholder="" class="contact-email form-control black-text" id="contact-email">
+                            </div> <!-- End of form-group -->
+
+                            <div class="input-field col m12 s12 wow fadeIn a6">
+                                <label for="message" class="h4 blue-text">Message *</label>
+                                <div class="form-group">
+                                <input type="text" name="ques" placeholder="" class="contact-message form-control black-text" id="contact-message"></textarea>
+                            </div>
+
+                                </div>
+                            <!-- End of form-group -->
+
+                              <button type="submit" class="btn">Send message</button> <!-- End of form-group -->
+                            </form>
+                            </div>
      </div>
- </div>
-     </div>
+   </div>
      <footer class="page-footer black">
        <div class="footer-copyright left">
          © 2017 Liudmyla Tkachenko
